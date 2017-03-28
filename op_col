@@ -1,0 +1,193 @@
+#!/usr/bin/awk -f 
+
+# 10.01.2010
+# dragos.niculescu@elcom.pub.ro 
+
+
+function assert(condition, string)
+{
+    if (! condition) {
+	printf("%s:%d: assertion failed: %s\n",
+	       FILENAME, FNR, string) > "/dev/stderr"
+	_assert_exit = 1
+	exit 1
+    }
+}
+
+function isnumber(x)
+{
+    if(x == (x + 0.0))
+	return 1; 
+    else
+	return 0; 
+}
+
+BEGIN{
+    op_max = 1; 
+    op_min = 2; 
+    op_avg = 3; 
+    op_med = 4; 
+    op_std = 5; 
+    op_grp = 6;
+    op_sum = 7;
+    op_col = 8;
+    op_maxcol = 9;   # min of a col, print line 
+    op_mincol = 10;  # max of a col, print line  
+    op_interp = 11;  # col val => prints a line that would correspond to $col==val  
+    op_var = 12; 
+
+########### I N I T   O P E R A T O R S ##############################
+    if(ARGV[1] == "max"){
+	op = op_max; 
+	for(c=1; c<100; c++)  # max 100 columns, max numbers 1E14
+	    emax[c] = -1E14; 
+    } else if (ARGV[1] == "min"){ 
+	op = op_min;
+	for(c=1; c<100; c++)  # max 100 columns, min numbers -1E14
+	    emin[c] = 1E14; 
+    } else if (ARGV[1] == "avg")
+	op = op_avg; 
+    else if (ARGV[1] == "med")
+	op = op_med; 
+    else if (ARGV[1] == "std")
+	op = op_std; 
+    else if (ARGV[1] == "var")
+	op = op_var; 
+    else if (ARGV[1] == "grp")
+	op = op_grp; 
+    else if (ARGV[1] == "sum")
+	op = op_sum; 
+    else if (ARGV[1] == "sel") # needs col numbers to select 
+	op = op_sel; 
+    else if (ARGV[1] == "mincol"){ # needs arg1 = col# 
+	op = op_mincol; 
+	mincolval = 1E14;
+	assert(ARGV[2] >= 1, "mincol op1 >= 1"); 
+    } else if (ARGV[1] == "maxcol"){ # needs arg1 = col# 
+	op = op_maxcol; 
+	maxcolval = -1E14;
+	assert(ARGV[2] >= 1, "maxcol op1 >= 1"); 
+    }else if (ARGV[1] == "interp"){ # needs args: col val 
+	op = op_interp; 
+	assert(ARGV[2] >= 1, "interp col >= 1");
+	assert(ARGC >= 4, "needs args: interp col val");
+	col_interp = ARGV[2]; 
+	val_interp = ARGV[3]; 
+    } else { 
+	printf("%s: need operator as first parameter:\n%s", 
+	       ARGV[0], "\tmin|max|avg|std|var|med|sum|sel|mincol|maxcol\n"); 
+	exit(3);
+    } 
+
+
+    for(i=2; i < ARGC; i++)
+	argv[i-1]=ARGV[i]; 
+    argc = ARGC-1; 
+    ARGC=1; # input becomes stdin 
+} 
+
+NF==0 {
+    next; # skip empty lines
+}
+
+op == op_interp && $col_interp <= val_interp {    
+    split($0, prevl); 
+}
+op == op_interp && $col_interp > val_interp {    
+    split($0, nextl);
+    print "nextl ", nextl[1]; 
+    print "prevl ", prevl[1];
+    
+    f = (val_interp - prevl[col_interp])/(nextl[col_interp] - prevl[col_interp]); 
+    for(i = 1; i <= NF; i++){ 
+	if(isnumber($i))
+	    printf("%f ", prevl[i] + f * (nextl[i] - prevl[i]))
+	else 
+	    printf("%s ", nextl[i]); 
+    }
+    print ""; 
+    exit 0; 
+}
+
+op == op_avg || op == op_sum {
+    nl++;
+    for(i=1;i<=NF;i++){
+	eavg[i]+=$i;
+    }
+    nf=NF;
+}
+
+op == op_var || op == op_std {
+    nl++;
+    for(i=1;i<=NF;i++){
+	eavg[i]+=$i;
+	eavg2[i]+=$i*$i;
+    }
+    nf=NF;
+}
+
+
+
+
+op == op_max {
+    for(i=1;i<=NF;i++){
+        if($i > emax[i])
+            emax[i] = $i;
+    }
+}
+
+op == op_maxcol {
+    if($(argv[1]) > maxcolval){
+	maxcolval = $(argv[1]);
+	emaxcol = $0; 
+    }
+}
+
+op == op_mincol {
+    if($(argv[1]) < mincolval){
+	mincolval = $(argv[1]);
+	emincol = $0; 
+    }
+}
+
+op == op_min {
+    for(i=1;i<=NF;i++){
+        if($i < emin[i])
+            emin[i] = $i; 
+    }
+}
+
+op == op_sel {
+    for(i=1; i < argc;i++)
+	printf("%s ", $(argv[i]));
+    print ""; 
+}
+
+{
+    nf = NF; # only last line matters!
+}
+
+END{
+    for(i=1; i<=nf; i++){
+	if(op == op_avg)
+	    printf("%e ", eavg[i]/nl);
+	else if(op == op_var || op == op_std) {
+	    var = (eavg2[i]/nl) - (eavg[i]*eavg[i]/(nl*nl));
+	    if(var < 0.0) var = -var; # FP aberrations   
+	    printf("%e ", op == op_var ? var : sqrt(var)); 
+	}
+	else if(op == op_sum)
+	    printf("%f ", eavg[i]);
+	else if (op == op_max)  
+	    printf("%s ", emax[i]);
+	else if (op == op_min)  
+	    printf("%s ", emin[i]);
+    }
+    if (op == op_maxcol)  
+	printf("%s", emaxcol);
+    if (op == op_mincol)  
+	printf("%s", emincol);
+
+    if(op != op_sel)
+	print "";
+}
