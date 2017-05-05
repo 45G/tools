@@ -6,7 +6,7 @@ execute it before enable tfo flag
 $ echo 3 | sudo tee /proc/sys/net/ipv4/tcp_fastopen
 '''
 
-PORT = 8888
+PORT = 1888
 TCP_FASTOPEN = 23
 BUFSIZE = 1000000
 

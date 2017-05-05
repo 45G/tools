@@ -4,7 +4,7 @@ import sys, socket
 from datetime import datetime
 
 HOST = "141.85.241.250"
-PORT = 8888
+PORT = 1888
 
 TCP_FASTOPEN = 23
 MSG_FASTOPEN = 0x20000000

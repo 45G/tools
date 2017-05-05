@@ -1,3 +1,3 @@
 
-socat  tcp-l:8888,fork exec:'/bin/cat'
+socat  tcp-l:1888,fork exec:'/bin/cat'
 
