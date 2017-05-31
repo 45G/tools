@@ -1,0 +1,62 @@
+# MSC for some fictional process
+msc {
+#     hscale = "0.5";
+     c[label=""], pc[label=""], ps[label=""], s[label=""]; 
+     c note s[label="Client server diagram\nshowing off all mscgen\nfeatures"];
+     c rbox c [label="Client"], 
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"], 
+     s rbox s[label="Server"];
+
+     c =>> pc[arcskip=1 ]; 
+     pc =>> ps [label = "Request", arcskip=1];
+     |||;
+     ps box ps [label ="connect"];
+     ps =>> s [label = "Initial\nReply", arcskip=1, textcolor="red", linecolor="green"], 
+     ps =>> pc [label = "Initial\nReply", arcskip=1, textcolor="red", linecolor="green"]; 
+     ...;
+     ps =>> pc [label = "Final Reply", arcskip=1]; 
+     |||;
+     --- [label = "more to run"]; 
+     
+     
+     c =>> pc[arcskip=1 ]; 
+     pc =>> ps [label = "Request", arcskip=1];
+     ps =>> pc [label = "Initial\nReply", arcskip=1]; 
+     ...;
+     ps =>> pc [label = "Final Reply", arcskip=1]; 
+     --- [label = "more to run"]; 
+
+     
+     
+     c =>> pc[arcskip=1 ]; 
+     pc =>> ps [label = "Request", arcskip=1];
+     ps =>> pc [label = "Initial\nReply", arcskip=1]; 
+     ...;
+     ps =>> pc [label = "Final Reply", arcskip=1]; 
+     --- [label = "more to run"]; 
+     
+     
+     c =>> pc[arcskip=1 ]; 
+     pc =>> ps [label = "Request", arcskip=1];
+     ps =>> pc [label = "Initial\nReply", arcskip=1]; 
+     ...;
+     ps =>> pc [label = "Final Reply", arcskip=1]; 
+     --- [label = "more to run"]; 
+     
+
+  ##  a->b [ label = "ab()" ] ;
+  ## b->c [ label = "bc(TRUE)"];
+  ## c=>c [ label = "process(1)" ];
+  ## c=>c [ label = "process(2)" ];
+  ## ...;
+  ## c=>c [ label = "process(n)" ];
+  ## c=>c [ label = "process(END)" ];
+  ## a<<=c [ label = "callback()"];
+  ## ---  [ label = "If more to run", ID="*" ];
+  ## a->a [ label = "next()"];
+  ## a->c [ label = "ac1()\nac2()"];
+  ## b<-c [ label = "cb(TRUE)"];
+  ## b->b [ label = "stalled(...)"];
+  ## a<-b [ label = "ab() = FALSE"];
+}

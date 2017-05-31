@@ -1,0 +1,32 @@
+# MSC for no TFO anywhere, SOCKS4 
+msc {
+#     hscale = "0.5";
+     c[label=""], pc[label=""], ps[label=""], s[label=""]; 
+     c note s[label="No TFO anywhere, SOCKS4"];
+     c rbox c [label="Client"], 
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"], 
+     s rbox s[label="Server"];
+
+     pc =>> ps[label = "SYN", arcskip=1 ], 
+     ps box ps [label ="accept"];
+     ps =>> pc[label = "SYNACK", arcskip=1 ]; 
+     pc =>> ps [label = "ACK", arcskip=1];
+     pc =>> ps[label = "REQ(IP, Port)", arcskip=1 ]; 
+     |||;
+     ps box ps [label ="connect"];
+
+     ps =>> s[label = "SYN", arcskip=1 ], 
+     s box s [label ="accept"];
+     s =>> ps[label = "SYNACK", arcskip=1 ]; 
+     ps =>> s [label = "ACK", arcskip=1], 
+     ps =>> pc [label = "Grant", arcskip=1]; 
+     pc =>> ps [label ="Data", arcskip=1]; 
+     ps =>> s [label ="Data", arcskip=1],  
+     c box c [label ="application\ndata"];
+     s =>> ps [label ="Data", arcskip=1]; 
+     ps =>> pc [label ="Data", arcskip=1]; 
+
+     ...;
+     c note s[label="Total time = 3T+2t"];
+}
