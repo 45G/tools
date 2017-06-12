@@ -3,7 +3,8 @@
 import sys, socket
 from datetime import datetime
 
-HOST = "141.85.241.250"
+HOST = "jepi.cs.pub.ro"
+#HOST = "px.bot.nu"
 PORT = 1888
 
 TCP_FASTOPEN = 23

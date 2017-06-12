@@ -20,16 +20,15 @@ def server():
 
   while True:
     conn, addr = s.accept()
-    print 'Connection from:', addr
+    #print 'Connection from:', addr
     bytes = 0; 
     while True:
       msg = conn.recv(BUFSIZE)
       bytes += len(msg)
       if not msg: break
-      #print '+' + msg + '+'
       conn.send(msg[::-1])
-      if '\n' in msg: break
-    print bytes, " bytes"
+      if '\n' in msg: continue
+    #print bytes, " bytes"
     conn.close()
 
   s.close()
