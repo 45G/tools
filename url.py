@@ -43,6 +43,7 @@ while i <= int(args.count):
     after_wlan = read_rx_bytes('wlan0')
     after_4g = read_rx_bytes('rmnet0')
     
-    print strftime("%s", gmtime()), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "wlan_rx:", after_wlan - before_wlan, "4g_rx:", after_4g - before_4g     
+    #print strftime("%s", gmtime()), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "wlan_rx:", after_wlan - before_wlan, "4g_rx:", after_4g - before_4g     
+    print time.time(), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "wlan_rx:", after_wlan - before_wlan, "4g_rx:", after_4g - before_4g      sys.stdout.flush()
     i = i + 1
    

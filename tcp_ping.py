@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
-import time,sys,argparse,socket 
+import time,sys,argparse,socket,datetime
 from datetime import datetime
+from time import gmtime, strftime
 
 def filter_verbose (s, v):
     if int(args.verbose) >= v:
@@ -68,7 +69,7 @@ while count != 0:
         #    print data.decode()
         rbytes = rbytes + len(data)
     after = datetime.now()
-    print filter_verbose ("src: " +  str(s.getsockname()[0]) + " port: " + str(s.getsockname()[1]), 1),\
+    print filter_verbose ("src: " +  str(s.getsockname()[0]) + " port: " + str(s.getsockname()[1]), 1), strftime("%s", gmtime()),\
                           "bytes:", sbytes, "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0
     if not datartt:
         s.close()
