@@ -1,8 +1,8 @@
-# MSC for no TFO anywhere, SOCKS4 
+# MSC for no TFO anywhere, SOCKS6 
 msc {
 #     hscale = "0.5";
      c[label=""], pc[label=""], ps[label=""], s[label=""]; 
-     c note s[label="No TFO anywhere, SOCKSv4"];
+     c note s[label="No TFO anywhere, SOCKSv6"];
      c rbox c [label="Client"], 
      pc rbox pc[label="Proxy\nClient"], 
      ps rbox ps[label="Proxy\nServer"], 
@@ -13,11 +13,11 @@ msc {
      pc =>> ps[label = "SYN", arcskip=2 ]; |||;
      ps =>> pc[label = "SYN+ACK", arcskip=2 ]; |||;
      pc =>> ps[label = "REQ", arcskip=2 ]; |||; 
-#     ps =>> pc[label = "A-REPLY", arcskip=2 ],
+     ps =>> pc[label = "A-REPLY", arcskip=2 ],
      ps =>> s[label = "SYN", arcskip=1 ];
 #     ps box ps [label ="accept"];
      s =>> ps[label = "SYN+ACK", arcskip=1 ]; 
-     ps =>> pc[label = "REPLY", arcskip=2 ];|||; 
+     ps =>> pc[label = "O-REPLY", arcskip=2 ];|||; 
      pc =>> c [label = "SYN+ACK", arcskip=0];|||;
      c =>> pc [label ="Data", arcskip=0], 
      pc =>> ps [label ="Data", arcskip=2];|||;  

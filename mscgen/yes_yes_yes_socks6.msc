@@ -1,0 +1,26 @@
+# MSC everywhere, SOCKS6 
+msc {
+#     hscale = "0.5";
+     c[label=""], pc[label=""], ps[label=""], s[label=""]; 
+     c note s[label="TFO everywhere, SOCKSv6"];
+     c rbox c [label="Client"], 
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"], 
+     s rbox s[label="Server"];
+
+     c =>> pc[label = "SYN+Data", arcskip=1 ]; 
+     pc =>> ps[label = "SYN+REQ+Data", arcskip=1 ]; 
+     ps =>> s[label = "SYN+Data", arcskip=2 ], 
+     |||, 
+     ps =>> pc[label = "SYN+ACK", arcskip=1 ];  
+     ps =>> pc[label = "A-REPLY", arcskip=1 ];
+      s =>> ps[label = "SYN+ACK+Data", arcskip=2 ]; 
+      |||;
+#     ps box ps [label ="accept"];
+     ps =>> pc [label = "O-REPLY", arcskip=1];
+     ps =>> pc [label = "Data", arcskip=1],
+     pc =>> c [label = "SYN+ACK", arcskip=1];
+     pc =>> c [label = "Data", arcskip=1];
+     ...;
+     c note s[label="Total time = T+t"];
+}
