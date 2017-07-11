@@ -2,12 +2,12 @@
 msc {
 #     hscale = "0.5";
      c[label=""], pc[label=""], ps[label=""], s[label=""]; 
-     c note s[label="No TFO anywhere, SOCKSv4"];
+     c note s[label="No TFO anywhere, SOCKSv4\nRTT(PC-PS) = T, RTT(PS-S) = t"];
      c rbox c [label="Client"], 
      pc rbox pc[label="Proxy\nClient"], 
      ps rbox ps[label="Proxy\nServer"], 
      s rbox s[label="Server"];
-
+ 
      c box c [label ="connect"];
      c =>> pc[label = "SYN", arcskip=0 ],  
      pc =>> ps[label = "SYN", arcskip=2 ]; |||;
@@ -28,5 +28,5 @@ msc {
      pc =>> c [label ="Data", arcskip=0]; 
 
      ...;
-     c note s[label="Total time = 3T+2t"];
+     c note s[label="Total time = 3T + 2t"];
 }

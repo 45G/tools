@@ -2,7 +2,7 @@
 msc {
 #     hscale = "0.5";
      c[label=""], pc[label=""], ps[label=""], s[label=""]; 
-     c note s[label="No TFO anywhere, SOCKSv6"];
+     c note s[label="No TFO anywhere, SOCKSv6\nRTT(PC-PS) = T, RTT(PS-S) = t"];
      c rbox c [label="Client"], 
      pc rbox pc[label="Proxy\nClient"], 
      ps rbox ps[label="Proxy\nServer"], 
@@ -26,7 +26,7 @@ msc {
      c box c [label ="application\ndata"];
      ps =>> pc [label ="Data", arcskip=2];|||; 
      pc =>> c [label ="Data", arcskip=0]; 
-
+ 
      ...;
-     c note s[label="Total time = 3T+2t"];
+     c note s[label="Total time = 3T + 2t"];
 }
