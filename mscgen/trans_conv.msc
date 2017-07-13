@@ -1,0 +1,23 @@
+
+msc {
+#     hscale = "0.5";
+     c[label=""], ps[label=""], s[label=""]; 
+     c note s[label="Transport Converter\n
+RTT(C-PS) = T, RTT(PS-S) = t"];
+     c rbox c [label="Client"], 
+     ps rbox ps[label="Proxy\nServer"], 
+     s rbox s[label="Server"];
+
+     c =>> ps[label = "SYN", arcskip=2 ];|||; 
+     ps =>> s[label = "SYN", arcskip=1 ]; 
+     s =>> ps[label = "SYN+ACK", arcskip=1 ];  
+     ps =>> c[label = "SYN+ACK", arcskip=2 ]; 
+      |||;
+#     ps box ps [label ="accept"];
+     c =>> ps [label = "ACK, Data", arcskip=2];|||; 
+     ps =>> s [label = "ACK, Data", arcskip=1];
+     s =>> ps [label = "ACK, Data", arcskip=1]; 
+     ps =>> c [label = "ACK, Data", arcskip=2];|||;
+     ...;
+     c note s[label="Total time = 2T + 2t"];
+}

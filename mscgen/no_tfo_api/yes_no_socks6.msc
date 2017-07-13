@@ -1,0 +1,31 @@
+
+msc {
+#     hscale = "0.5";
+     pc[label=""], ps[label=""], s[label=""]; 
+     pc note s[label="TFO @client&proxy, no TFO @server, SOCKSv6\n
+RTT(PC-PS) = T, RTT(PS-S) = t"];
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"], 
+     s rbox s[label="Server"];
+
+     pc =>> ps[label = "SYN+REQ", arcskip=2 ]; 
+     |||;
+     ps =>> s[label = "SYN", arcskip=1 ], 
+     |||, 
+     ps =>> pc[label = "SYN+ACK", arcskip=2 ];  
+     ps =>> pc[label = "A-REPLY", arcskip=2 ],
+     s =>> ps[label = "SYN+ACK", arcskip=2 ]; 
+      |||;
+     ps =>> pc [label = "O-REPLY", arcskip=2];|||;  
+     pc =>> ps [label = "Data", arcskip=2];|||; 
+
+#     ps box ps [label ="accept"];
+
+     ps =>> s [label = "Data", arcskip=1]; 
+     s =>> ps [label = "Data", arcskip=1];
+
+     ps =>> pc [label = "Data", arcskip=2];
+     |||;
+     ...;
+     pc note s[label="Total time = 2T + 2t"];
+}

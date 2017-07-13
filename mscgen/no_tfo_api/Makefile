@@ -1,12 +1,8 @@
 
 SRC :=\
-no_no_no_socks4\
-no_no_no_tcp\
-yes_yes_no_socks6\
-no_no_no_socks6\
-yes_yes_yes_socks6\
-trans_conv\
-mp_convert
+yes_no_socks6\
+no_no_socks6\
+yes_yes_socks6
 
 MSC := $(SRC:%=%.msc)
 EPS := $(SRC:%=%.eps)
