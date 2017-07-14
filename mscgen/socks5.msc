@@ -1,0 +1,20 @@
+# SOCKS5  
+msc {
+     hscale = "0.8";
+     pc[label=""], ps[label=""]; 
+     pc note ps[label="SOCKSv5"];
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"]; 
+
+     pc =>> ps[label = "Auth methods", arcskip=2 ]; |||;
+     ps =>> pc[label = "Method chosen", arcskip=2 ]; |||;
+     |||;...;
+     ps <<=>> pc [label = "Authentication", arcskip=0 ];
+     ...;
+     pc =>> ps[label = "Request(Server)", arcskip=2 ];|||;|||;...;
+     ps =>> pc[label = "Reply", arcskip=2 ],|||;
+      |||;
+     pc =>> ps [label = "Data", arcskip=2];|||;   
+     ...;
+#     pc note ps[label="Total time = T + t"];
+}

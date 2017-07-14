@@ -1,0 +1,17 @@
+# SOCKS6  
+msc {
+     hscale = "0.8";
+     pc[label=""], ps[label=""]; 
+     pc note ps[label="SOCKSv6"];
+     pc rbox pc[label="Proxy\nClient"], 
+     ps rbox ps[label="Proxy\nServer"]; 
+
+     pc =>> ps[label = "Request(Method, Server, Data)", arcskip=2 ]; |||;
+     ps =>> pc[label = "Auth Reply", arcskip=2 ]; |||;
+     |||;...;
+     ps <<=>> pc [label = "Authentication", arcskip=0 ];
+     ...;
+     ps =>> pc[label = "Operation Reply", arcskip=3 ];|||;
+     ...;
+#     pc note ps[label="Total time = T + t"];
+}
