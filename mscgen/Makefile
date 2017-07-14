@@ -6,6 +6,7 @@ yes_yes_no_socks6\
 no_no_no_socks6\
 yes_yes_yes_socks6\
 socks6\
+socks6_short\
 socks5\
 trans_conv\
 mp_convert

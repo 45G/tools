@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="480px"
+   height="230px"
+   viewBox="0 0 480 230"
+   shape-rendering="crispEdges"
+   stroke-width="1"
+   text-rendering="geometricPrecision"
+   id="svg2"
+   inkscape:version="0.91 r"
+   sodipodi:docname="socks6_short.col.svg"
+   inkscape:export-filename="/home/dniculescu/cerc/4.5G/src/tools/mscgen/socks6_short.col.png"
+   inkscape:export-xdpi="193.35001"
+   inkscape:export-ydpi="193.35001">
+  <metadata
+     id="metadata182">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs180" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1124"
+     inkscape:window-height="926"
+     id="namedview178"
+     showgrid="false"
+     inkscape:zoom="1.275"
+     inkscape:cx="297.97487"
+     inkscape:cy="53.601519"
+     inkscape:window-x="65"
+     inkscape:window-y="40"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <polygon
+     fill="white"
+     points="118,7 120,7 120,16 118,16"
+     id="polygon4" />
+  <text
+     x="120"
+     y="16"
+     textLength="0"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     text-anchor="middle"
+     id="text6" />
+  <polygon
+     fill="white"
+     points="358,7 360,7 360,16 358,16"
+     id="polygon8" />
+  <text
+     x="360"
+     y="16"
+     textLength="0"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     text-anchor="middle"
+     id="text10" />
+  <line
+     x1="120"
+     y1="22"
+     x2="120"
+     y2="50"
+     stroke="black"
+     id="line12" />
+  <line
+     x1="360"
+     y1="22"
+     x2="360"
+     y2="50"
+     stroke="black"
+     id="line14" />
+  <polygon
+     fill="white"
+     points="8,22 460,22 460,44 8,44"
+     id="polygon16" />
+  <polygon
+     fill="white"
+     points="8,34 472,34 472,44 8,44"
+     id="polygon18" />
+  <polygon
+     fill="white"
+     points="460,22 472,34 460,34"
+     id="polygon20" />
+  <line
+     x1="8"
+     y1="22"
+     x2="460"
+     y2="22"
+     stroke="black"
+     id="line22" />
+  <line
+     x1="8"
+     y1="44"
+     x2="472"
+     y2="44"
+     stroke="black"
+     id="line24" />
+  <line
+     x1="8"
+     y1="22"
+     x2="8"
+     y2="44"
+     stroke="black"
+     id="line26" />
+  <line
+     x1="472"
+     y1="34"
+     x2="472"
+     y2="44"
+     stroke="black"
+     id="line28" />
+  <line
+     x1="460"
+     y1="22"
+     x2="472"
+     y2="34"
+     stroke="black"
+     id="line30" />
+  <line
+     x1="460"
+     y1="22"
+     x2="460"
+     y2="34"
+     stroke="black"
+     id="line32" />
+  <line
+     x1="472"
+     y1="34"
+     x2="460"
+     y2="34"
+     stroke="black"
+     id="line34" />
+  <polygon
+     fill="white"
+     points="211,29 268,29 268,38 211,38"
+     id="polygon36" />
+  <text
+     x="212"
+     y="38"
+     textLength="55"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text38">
+SOCKSv6
+</text>
+  <line
+     x1="120"
+     y1="50"
+     x2="120"
+     y2="78"
+     stroke="black"
+     id="line40" />
+  <line
+     x1="360"
+     y1="50"
+     x2="360"
+     y2="78"
+     stroke="black"
+     id="line42" />
+  <polygon
+     fill="white"
+     points="14,50 226,50 226,72 14,72"
+     id="polygon44" />
+  <polygon
+     fill="white"
+     points="8,56 232,56 232,66 8,66"
+     id="polygon46" />
+  <circle
+     fill="white"
+     cx="14"
+     cy="56"
+     r="6"
+     id="circle48" />
+  <circle
+     fill="white"
+     cx="226"
+     cy="56"
+     r="6"
+     id="circle50" />
+  <circle
+     fill="white"
+     cx="14"
+     cy="66"
+     r="6"
+     id="circle52" />
+  <circle
+     fill="white"
+     cx="226"
+     cy="66"
+     r="6"
+     id="circle54" />
+  <line
+     x1="14"
+     y1="50"
+     x2="226"
+     y2="50"
+     stroke="black"
+     id="line56" />
+  <line
+     x1="14"
+     y1="72"
+     x2="226"
+     y2="72"
+     stroke="black"
+     id="line58" />
+  <line
+     x1="8"
+     y1="56"
+     x2="8"
+     y2="66"
+     stroke="black"
+     id="line60" />
+  <line
+     x1="232"
+     y1="56"
+     x2="232"
+     y2="66"
+     stroke="black"
+     id="line62" />
+  <path
+     d="M 8 56 A6,6 0 0,1 14,50"
+     stroke="black"
+     fill="none"
+     id="path64" />
+  <path
+     d="M 226 50 A6,6 0 0,1 232,56"
+     stroke="black"
+     fill="none"
+     id="path66" />
+  <path
+     d="M 232 66 A6,6 0 0,1 226,72"
+     stroke="black"
+     fill="none"
+     id="path68" />
+  <path
+     d="M 14 72 A6,6 0 0,1 8,66"
+     stroke="black"
+     fill="none"
+     id="path70" />
+  <polygon
+     fill="white"
+     points="103,51 136,51 136,60 103,60"
+     id="polygon72" />
+  <text
+     x="104"
+     y="60"
+     textLength="31"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text74">
+Proxy
+</text>
+  <polygon
+     fill="white"
+     points="103,62 136,62 136,71 103,71"
+     id="polygon76" />
+  <text
+     x="104"
+     y="71"
+     textLength="31"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text78">
+Client
+</text>
+  <polygon
+     fill="white"
+     points="254,50 466,50 466,72 254,72"
+     id="polygon80" />
+  <polygon
+     fill="white"
+     points="248,56 472,56 472,66 248,66"
+     id="polygon82" />
+  <circle
+     fill="white"
+     cx="254"
+     cy="56"
+     r="6"
+     id="circle84" />
+  <circle
+     fill="white"
+     cx="466"
+     cy="56"
+     r="6"
+     id="circle86" />
+  <circle
+     fill="white"
+     cx="254"
+     cy="66"
+     r="6"
+     id="circle88" />
+  <circle
+     fill="white"
+     cx="466"
+     cy="66"
+     r="6"
+     id="circle90" />
+  <line
+     x1="254"
+     y1="50"
+     x2="466"
+     y2="50"
+     stroke="black"
+     id="line92" />
+  <line
+     x1="254"
+     y1="72"
+     x2="466"
+     y2="72"
+     stroke="black"
+     id="line94" />
+  <line
+     x1="248"
+     y1="56"
+     x2="248"
+     y2="66"
+     stroke="black"
+     id="line96" />
+  <line
+     x1="472"
+     y1="56"
+     x2="472"
+     y2="66"
+     stroke="black"
+     id="line98" />
+  <path
+     d="M 248 56 A6,6 0 0,1 254,50"
+     stroke="black"
+     fill="none"
+     id="path100" />
+  <path
+     d="M 466 50 A6,6 0 0,1 472,56"
+     stroke="black"
+     fill="none"
+     id="path102" />
+  <path
+     d="M 472 66 A6,6 0 0,1 466,72"
+     stroke="black"
+     fill="none"
+     id="path104" />
+  <path
+     d="M 254 72 A6,6 0 0,1 248,66"
+     stroke="black"
+     fill="none"
+     id="path106" />
+  <polygon
+     fill="white"
+     points="343,51 376,51 376,60 343,60"
+     id="polygon108" />
+  <text
+     x="344"
+     y="60"
+     textLength="31"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text110">
+Proxy
+</text>
+  <polygon
+     fill="white"
+     points="341,62 378,62 378,71 341,71"
+     id="polygon112" />
+  <text
+     x="342"
+     y="71"
+     textLength="35"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text114">
+Server
+</text>
+  <line
+     x1="120"
+     y1="78"
+     x2="120"
+     y2="106"
+     stroke="black"
+     id="line116" />
+  <line
+     x1="360"
+     y1="78"
+     x2="360"
+     y2="106"
+     stroke="black"
+     id="line118" />
+  <line
+     x1="120"
+     y1="89"
+     x2="360"
+     y2="134"
+     stroke="black"
+     id="line120" />
+  <line
+     x1="360"
+     y1="134"
+     x2="350"
+     y2="140"
+     stroke="black"
+     id="line122" />
+  <line
+     x1="350"
+     y1="128"
+     x2="360"
+     y2="134"
+     stroke="black"
+     id="line124" />
+  <polygon
+     fill="white"
+     points="155,101 324,101 324,110 155,110"
+     id="polygon126" />
+  <text
+     x="156"
+     y="110"
+     textLength="167"
+     font-size="12"
+     id="text128"
+     style="font-size:12px;font-family:Helvetica;fill:#000000">Request(<tspan
+   style="font-weight:bold;fill:#0000ff"
+   id="tspan3510">Methods</tspan>
+, <tspan
+   style="font-weight:bold;fill:#008000"
+   id="tspan3514">Server</tspan>
+, <tspan
+   style="font-weight:bold;fill:#ff0000"
+   id="tspan3518">Data</tspan>
+)</text>
+  <line
+     x1="120"
+     y1="106"
+     x2="120"
+     y2="123"
+     stroke="black"
+     id="line130" />
+  <line
+     x1="360"
+     y1="106"
+     x2="360"
+     y2="123"
+     stroke="black"
+     id="line132" />
+  <line
+     x1="120"
+     y1="123"
+     x2="120"
+     y2="151"
+     stroke="black"
+     id="line134" />
+  <line
+     x1="360"
+     y1="123"
+     x2="360"
+     y2="151"
+     stroke="black"
+     id="line136" />
+  <line
+     x1="360"
+     y1="134"
+     x2="120"
+     y2="184"
+     stroke="black"
+     id="line138" />
+  <line
+     x1="120"
+     y1="184"
+     x2="130"
+     y2="190"
+     stroke="black"
+     id="line140" />
+  <line
+     x1="120"
+     y1="184"
+     x2="130"
+     y2="178"
+     stroke="black"
+     id="line142" />
+  <polygon
+     fill="white"
+     points="209,149 270,149 270,158 209,158"
+     id="polygon144" />
+  <text
+     x="210"
+     y="158"
+     textLength="59"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text146">
+Auth Reply
+</text>
+  <line
+     x1="120"
+     y1="151"
+     x2="120"
+     y2="179"
+     stroke="black"
+     id="line148" />
+  <line
+     x1="360"
+     y1="151"
+     x2="360"
+     y2="179"
+     stroke="black"
+     id="line150" />
+  <line
+     x1="360"
+     y1="162"
+     x2="120"
+     y2="201"
+     stroke="black"
+     id="line152" />
+  <line
+     x1="120"
+     y1="201"
+     x2="130"
+     y2="207"
+     stroke="black"
+     id="line154" />
+  <line
+     x1="120"
+     y1="201"
+     x2="130"
+     y2="195"
+     stroke="black"
+     id="line156" />
+  <polygon
+     fill="white"
+     points="195,171 284,171 284,180 195,180"
+     id="polygon158" />
+  <text
+     x="196"
+     y="180"
+     textLength="87"
+     font-family="Helvetica"
+     font-size="12"
+     fill="black"
+     id="text160">
+Operation Reply
+</text>
+  <line
+     x1="120"
+     y1="179"
+     x2="120"
+     y2="196"
+     stroke="black"
+     id="line162" />
+  <line
+     x1="360"
+     y1="179"
+     x2="360"
+     y2="196"
+     stroke="black"
+     id="line164" />
+  <line
+     x1="120"
+     y1="196"
+     x2="120"
+     y2="213"
+     stroke="black"
+     id="line166" />
+  <line
+     x1="360"
+     y1="196"
+     x2="360"
+     y2="213"
+     stroke="black"
+     id="line168" />
+  <line
+     x1="120"
+     y1="213"
+     x2="120"
+     y2="230"
+     stroke="black"
+     stroke-dasharray="2,2"
+     id="line170" />
+  <line
+     x1="360"
+     y1="213"
+     x2="360"
+     y2="230"
+     stroke="black"
+     stroke-dasharray="2,2"
+     id="line172" />
+  <line
+     x1="120"
+     y1="224"
+     x2="120"
+     y2="230"
+     stroke="black"
+     id="line174" />
+  <line
+     x1="360"
+     y1="224"
+     x2="360"
+     y2="230"
+     stroke="black"
+     id="line176" />
+</svg>
