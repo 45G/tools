@@ -1,0 +1,79 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:/C=us/ST=New York/O=Example from Apress Media LLC/OU=Foundations of Python Network Programming 3rd Ed/CN=localhost/emailAddress=localhost@example.com
+   i:/C=us/ST=New York/L=New York/O=Example CA from Apress Media LLC/OU=Foundations of Python Network Programming 3rd Ed/CN=ca/emailAddress=ca@example.com
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIE+jCCA2ICAQUwDQYJKoZIhvcNAQELBQAwgcUxCzAJBgNVBAYTAnVzMREwDwYD
+VQQIEwhOZXcgWW9yazERMA8GA1UEBxMITmV3IFlvcmsxKTAnBgNVBAoTIEV4YW1w
+bGUgQ0EgZnJvbSBBcHJlc3MgTWVkaWEgTExDMTkwNwYDVQQLEzBGb3VuZGF0aW9u
+cyBvZiBQeXRob24gTmV0d29yayBQcm9ncmFtbWluZyAzcmQgRWQxCzAJBgNVBAMT
+AmNhMR0wGwYJKoZIhvcNAQkBFg5jYUBleGFtcGxlLmNvbTAgFw0xNDA2MjUyMTE3
+MjVaGA8yMTE0MDYwMTIxMTcyNVowgb0xCzAJBgNVBAYTAnVzMREwDwYDVQQIEwhO
+ZXcgWW9yazEmMCQGA1UEChMdRXhhbXBsZSBmcm9tIEFwcmVzcyBNZWRpYSBMTEMx
+OTA3BgNVBAsTMEZvdW5kYXRpb25zIG9mIFB5dGhvbiBOZXR3b3JrIFByb2dyYW1t
+aW5nIDNyZCBFZDESMBAGA1UEAxMJbG9jYWxob3N0MSQwIgYJKoZIhvcNAQkBFhVs
+b2NhbGhvc3RAZXhhbXBsZS5jb20wggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGK
+AoIBgQC/VvdYyZiNTinyL2xGPCZUQVJbdL+VPIn34xyCMQW+feoFQbgCzX3kXpIy
+EhuZ/3ZuCasSuDAjISU8RJno3ea9g+k4Vqw5oKFPi9PO9R+GAn7eSHERvJ+MJ6dB
+qVeJS06sQ4KNTwAsEU/sr9D6kJEfFo0P774JwQ/+mkOI1hTQJ0ZOxD1q1Spg8Lfb
+FqaEeFozGUNV9XpWUlau5hxPOy/YuCmfqPZLVUVuuh+U1zCpJXI6Ee2lV8fxdvnO
+hodVcBWq5nrw/3ypRZMoGu5usKiHXkMtyO8nNsMkFZO6RhEKHJKClcP1naLbdkuG
+1LVn+JnGKHFVZb3Fc0tIc0EcAFDBBZ4aOBDd4rC6rUYg7gbQDSTRlU0VvwDO19ze
+G47uZiUxH563lPdYwIYGV8pQpnPykjtqbSLp7bXODOrb2X+ypwQlvmIQRQILHG7E
+i96sI+XkhHGSo4OBydeSg8fuJAVUkdx3hZQWhCGdEVM9yqsc99u1+C67Xa8GdCh1
+EJJqsvMCAwEAATANBgkqhkiG9w0BAQsFAAOCAYEAsC5oDJ8JhkRScXnmADwSuWu4
+anWarKJHwkSiu3S/dDoQpaj77Vm5mEP1EQYj1fK984yXkTBzSo/xIaemAzg1zwgQ
+nid6TXWmnvMJFI0aC0C4FOfTSA+2Fwr1wRLFNiUfOfAZj3WU73dyZZS68hbp+Xw3
+qOURV16tLZ8s22sFkrdk29XlJ+vEI+9KXXV2Ho+7SWxTth9jb4LmWfF0rW+rCzr6
+GBNy8+uyP2QObMRaZmrOBcCLeJ5sQQ1a2/6AuUwBz6O1rRdfPgWzOKggfxAtZqda
+GCAc0mYG7yioAhESByU3Px4t8ZjXwlQfkj1u3jwD1H8AlMx8IBJ2z/PmWxZLv8YI
+nsYgJ8objq1KZdP11hpsWNRhTb24wXKyR+QrDdVYzk1kaupzCWDQFDsV6vcekOh3
+N5pX5slwWXHCVlusm9iTGWnPyll1lYcn10EEt9l35mSHDR+Vxy17pJJRCFPqnblg
+4taNuilHU4BLMYVoQfeAHfCOk8wvcvFzVrBjBd+i
+-----END CERTIFICATE-----
+subject=/C=us/ST=New York/O=Example from Apress Media LLC/OU=Foundations of Python Network Programming 3rd Ed/CN=localhost/emailAddress=localhost@example.com
+issuer=/C=us/ST=New York/L=New York/O=Example CA from Apress Media LLC/OU=Foundations of Python Network Programming 3rd Ed/CN=ca/emailAddress=ca@example.com
+---
+No client certificate CA names sent
+Peer signing digest: SHA512
+Server Temp Key: ECDH, P-256, 256 bits
+---
+SSL handshake has read 2065 bytes and written 434 bytes
+---
+New, TLSv1/SSLv3, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 3072 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 16FF3DC6D37361AD37625D251C761F9A4ABDD2843C354B71C265619291F790C2
+    Session-ID-ctx: 
+    Master-Key: B1479DF3AAA6EE0AF2F208C67F57054FA2609C6A7A07C5D04A80AA8D03CA7176F590D37CFE6D81678161036E238ABB80
+    Key-Arg   : None
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - ea 3d fc 9f 99 4d 70 1f-d2 2c dc 0f 1d 40 c0 cd   .=...Mp..,...@..
+    0010 - a6 39 57 04 28 fb 00 cb-2c ef 54 f9 a5 82 d8 86   .9W.(...,.T.....
+    0020 - 17 bf e6 89 97 19 c4 08-fc 7c cd 89 37 b8 b4 fb   .........|..7...
+    0030 - cc 2b dd 8c b3 c9 9b 95-27 6f 0d a2 18 b9 25 07   .+......'o....%.
+    0040 - b4 10 8b 7c c4 a7 34 77-9d 45 50 98 5e df 48 52   ...|..4w.EP.^.HR
+    0050 - 4d d3 f6 4c c7 23 8a 03-63 16 e4 bc a4 97 93 b9   M..L.#..c.......
+    0060 - 89 07 d3 51 7c ff b0 fd-d3 ca 24 66 27 7c 99 03   ...Q|.....$f'|..
+    0070 - ad da 8f 51 f0 e9 09 e8-b4 c5 6b a3 8d e4 84 c9   ...Q......k.....
+    0080 - f2 c4 00 a7 f2 f6 9a 28-a2 45 ad 41 2c 3e 07 39   .......(.E.A,>.9
+    0090 - a0 c7 2f b7 b9 df d9 c3-4c 71 4f 89 47 7a 41 1d   ../.....LqO.GzA.
+
+    Start Time: 1500567025
+    Timeout   : 300 (sec)
+    Verify return code: 0 (ok)
+---
+Simple is better than complex.
