@@ -21,8 +21,8 @@ if __name__ == '__main__':
 i = 1
 while i <= int(args.count): 
     before = datetime.now()
-    before_wlan = read_rx_bytes('wlan0')
-    before_4g = read_rx_bytes('rmnet0')
+    before_eth = read_rx_bytes('eno1')
+#    before_4g = read_rx_bytes('rmnet0')
 #    response = urllib2.urlopen('http://px.bot.nu/100M')
 #    html = response.read(int(args.length))
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)#
@@ -40,11 +40,11 @@ while i <= int(args.count):
             break 
         flen = flen - len(html)
     after = datetime.now()
-    after_wlan = read_rx_bytes('wlan0')
-    after_4g = read_rx_bytes('rmnet0')
+    after_eth = read_rx_bytes('eno1')
+#    after_4g = read_rx_bytes('rmnet0')
     
     #print strftime("%s", gmtime()), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "wlan_rx:", after_wlan - before_wlan, "4g_rx:", after_4g - before_4g     
-    print time.time(), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "wlan_rx:", after_wlan - before_wlan, "4g_rx:", after_4g - before_4g      
+    print time.time(), "Bytes:", int(args.length), "ms:", (after-before).seconds*1000.0 + (after-before).microseconds/1000.0, "eth_rx:", after_eth - before_eth#, "4g_rx:", after_4g - before_4g      
     sys.stdout.flush()
     i = i + 1
    
