@@ -2,10 +2,11 @@
 
 import sys
 from math import sqrt
-
-def stddev(lst):
-    mean = float(sum(lst)) / len(lst)
-    return sqrt(float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2, lst))) / len(lst))
+from numpy import median
+from numpy import average
+from numpy import mean
+from numpy import std
+from numpy import histogram
 
 f = open(sys.argv[1])
 
@@ -16,11 +17,14 @@ for line in f:
 	time = float(data[4])
 	wlan_rx = int(data[6])
 	lte_rx = int(data[8])
-	print time, wlan_rx, lte_rx, wlan_rx/time, lte_rx/time, (wlan_rx + lte_rx)/time
-	speed.append((wlan_rx + lte_rx)/time)
+	wlan_speed = (8*wlan_rx)/(time*1000)
+	lte_speed = (8*lte_rx)/(time*1000)
+	total_speed = wlan_speed + lte_speed
+	print time, wlan_rx, lte_rx, wlan_speed, lte_speed, total_speed
+	speed.append(total_speed)
 
+print min(speed), average(speed), median(speed), max(speed), std(speed), "Mbps"
+print histogram(speed)
 
-print min(speed)/1000, sum(speed)/len(speed)/1000, max(speed)/1000, stddev(speed)/1000, "MBytes/s"
-print 8*min(speed)/1000, 8*sum(speed)/len(speed)/1000, 8*max(speed)/1000, 8*stddev(speed)/1000, "Mbps"
 
 f.close()
