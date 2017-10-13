@@ -2,10 +2,11 @@
 
 import sys
 from math import sqrt
-
-def stddev(lst):
-    mean = float(sum(lst)) / len(lst)
-    return sqrt(float(reduce(lambda x, y: x + y, map(lambda x: (x - mean) ** 2, lst))) / len(lst))
+from numpy import median
+from numpy import average
+from numpy import mean
+from numpy import std
+from numpy import histogram
 
 f = open(sys.argv[1])
 
@@ -13,8 +14,10 @@ rtt = []
 
 for line in f:
 	data = line.split()
-	rtt.append(float(data[4]))
+	if (float(data[4]) < 140):
+		rtt.append(float(data[4]))
 
-print min(rtt), sum(rtt)/len(rtt), max(rtt), stddev(rtt), "ms"
+print min(rtt), average(rtt), median(rtt), max(rtt), std(rtt),  "ms"
+print histogram(rtt, bins=20)
 
 f.close()
