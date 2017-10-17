@@ -13,4 +13,7 @@ in /etc/opt/ss5/ss5.conf setup appropriate networks to be accepted:
 
  permit -        93.0.0.0/8      -       0.0.0.0/0       -       -       -       -       -
 
-# ss5 -u root -b 141.85.241.250:5201 
+# ss5 -u root -b x.y.z.w:5201 
+
+In proxydroid create a profile with proxy host IP x.y.x.w, port 5201, proxy type SOCKSv4 
+
