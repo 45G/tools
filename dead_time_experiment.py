@@ -5,11 +5,6 @@ from datetime import date
 from sys import argv
 from array import array
 
-def check_wifi_enabled_since(time):
-	cmd = "adb logcat ConnectivityReceiver:D -e \'WiFi enabled 12345\'  -b main -t "+time
-	proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-	out, err = proc.communicate()
-	print out
 	
 def check_wifi_enabled(time):
 	cmd = "adb logcat ConnectivityReceiver:D -e \'WiFi enabled 12345\'  -b main -T "+time
@@ -21,15 +16,7 @@ def check_wifi_enabled(time):
 		if output:
 			print output.strip()
 			return int(output.strip().split()[9])
-			#break
-	#rc = process.poll()
-	#return rc
 	
-def check_wifi_disabled_since(time):
-	cmd = "adb logcat ConnectivityReceiver:D -e \'WiFi disabled 12345\'  -b main -t "+time
-	proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-	out, err = proc.communicate()
-	print out
 	
 def check_wifi_disabled(time):
 	cmd = "adb logcat ConnectivityReceiver:D -e \'WiFi disabled 12345\'  -b main -T "+time
@@ -41,9 +28,6 @@ def check_wifi_disabled(time):
 		if output:
 			print output.strip()
 			return int(output.strip().split()[9])
-			#break
-	#rc = process.poll()
-	#return rc
 	
 def change_wifi_power(power):
 	cmd = "ssh root@192.168.142.117 iwconfig wlan0 txpower "+str(power)
@@ -67,9 +51,6 @@ def run_tcp_ping_script():
 			tokens = output.strip().split()
 			if (len(tokens) > 0): 
 				timestamp = int(tokens[0])
-			#print timestamp
-	#rc = process.poll()
-	#return rc
 	return timestamp
 	
 	
